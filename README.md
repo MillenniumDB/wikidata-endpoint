@@ -12,9 +12,11 @@ When you issue a request to our query service, we automatically receive
 information like the time of the request, your I.P. address, the query
 received, details of the agent (browser, etc.) that sent the request.
 Currently we perform no persistent logging of such information. In
-future we may log such information, which will not be shared with third
-parties, and will only be used internally to help us to improve the
-service.
+future we may log such information. Details of individual requests 
+will not be shared with third parties, and will only be used internally 
+to help us to improve the service. We may publish aggregate data, such as
+the number of requests per hour, number of queries using a certain feature,
+etc.
 
 ## Usage policy
 
