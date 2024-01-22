@@ -4,7 +4,7 @@ This page contains information about the Wikidata SPARQL endpoint available at
 https://wikidata.imfd.cl/
 
 The endpoint uses MillenniumDB, developed by the [Millennium Institute for Foundational Research on Data](https://imfd.cl/en/). It is still under development and licensed under GPL v2 license.
-The source code is available [here](https://github.com/MillenniumDB/MillenniumDB). More details about the core of the engine, including some performance data, are available [in our paper](https://direct.mit.edu/dint/article/5/3/560/117375/MillenniumDB-An-Open-Source-Graph-Database-System). Since the paper was published, we have extended MillenniumDB to support SPARQL 1.1. (The underlying system supports further features not covered by the SPARQL syntax, such as returning paths.)
+The source code is available [here](https://github.com/MillenniumDB/MillenniumDB). More details about the core of the engine, including some performance data, are available [in our paper](https://direct.mit.edu/dint/article/5/3/560/117375/MillenniumDB-An-Open-Source-Graph-Database-System). Since the paper was published, we have extended MillenniumDB to support SPARQL 1.1. (The underlying system supports further features not covered by the SPARQL syntax, such as returning paths.) The human interface is based on [YASGUI](https://github.com/TriplyDB/Yasgui).
 
 ## Privacy policy
 
