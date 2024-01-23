@@ -45,10 +45,6 @@ since we currently lack specific optimizations for these features.
 - Blazegraph-specific features are not yet supported. `SERVICE` features
 for labels, for example, are not supported.
 
-- Some queries are currently disabled, such as catalog query answering
-(e.g. count all triples), as they currently require processing the full
-graph.
-
 - There is no query caching, but sending the same query consecutively may give better performance due to storage caching.
 
 - SPARQL Update and Named Graphs are not currently supported by
