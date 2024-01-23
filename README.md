@@ -1,25 +1,28 @@
 # Wikidata Endpoint
 
-This page contains information about the wikidata SPARQL endpoint available at
+This page contains information about the Wikidata SPARQL endpoint available at
 https://wikidata.imfd.cl/
 
-The endpoint is using MillenniumDB, developed by the Millennium Institute for Foundational Research on Data. It is still under development and licensed under GPL v2 license.
-The source code is available [here](https://github.com/MillenniumDB/MillenniumDB).
+The endpoint uses MillenniumDB, developed by the [Millennium Institute for Foundational Research on Data](https://imfd.cl/en/). It is still under development and licensed under GPL v2 license.
+The source code is available [here](https://github.com/MillenniumDB/MillenniumDB). More details about the core of the engine, including some performance data, are available [in our paper](https://direct.mit.edu/dint/article/5/3/560/117375/MillenniumDB-An-Open-Source-Graph-Database-System). Since the paper was published, we have extended MillenniumDB to support SPARQL 1.1. (The underlying system supports further features not covered by the SPARQL syntax, such as returning paths.) The human interface is based on [YASGUI](https://github.com/TriplyDB/Yasgui).
 
 ## Privacy policy
+
 When you issue a request to our query service, we automatically receive
 information like the time of the request, your I.P. address, the query
-received, details of the agent (browser, etc.) that send the request.
+received, details of the agent (browser, etc.) that sent the request.
 Currently we perform no persistent logging of such information. In
-future we may log such information, which will not be shared with third
-parties, and will only be used internally to help us to improve the
-service.
-
+future we may log such information. Details of individual requests 
+will not be shared with third parties, and will only be used internally 
+to help us to improve the service. We may publish aggregate data, such as
+the number of requests per hour, number of queries using a certain feature,
+etc.
 
 ## Usage policy
-There is a 1 minute query limit.
 
-Currently we do not impose a result limit. However, if you have a query with millions of results the web interface will probably not work, or the engine will timeout.
+There is a 1 minute query limit. Queries that require longer processing will time out.
+
+Currently we do not impose a result limit. However, if you have a query with millions of results the web interface may not work, or the engine may timeout.
 
 ## Hardware info
 
@@ -30,16 +33,19 @@ traffic may cause delays, and geographical distance may cause lag for
 frequent simple queries.
 
 ## Limitations
-- The dataset is currently loaded from weekly dumps, and thus updates
-will be periodically for now.
 
-- FILTERs and BGPs with property paths (C2RPQs) may sometimes be slow
-since we lack specific optimizations for these features.
+MillenniumDB is under active development. Here we list some current limitations.
 
-- BlazeGraph specific features are not yet supported. SERVICE features
+- The Wikidata dataset is currently loaded from weekly dumps, and thus updates
+will be periodical for now.
+
+- Some `FILTER` operations and complex BGPs with property paths (C2RPQs) may sometimes be slow
+since we currently lack specific optimizations for these features.
+
+- Blazegraph-specific features are not yet supported. `SERVICE` features
 for labels, for example, are not supported.
 
-- Some queries are currently not functioning, such as catalog query answering
+- Some queries are currently disabled, such as catalog query answering
 (e.g. count all triples), as they currently require processing the full
 graph.
 
@@ -50,5 +56,8 @@ MillenniumDB, though this should not affect the current service.
 
 - We have some differences to the SPARQL 1.1 Standard, more details [here](https://github.com/MillenniumDB/MillenniumDB/blob/main/doc/sparql/sparql_deviations.md).
 
+If you wish to comment about such a limitation, please leave us feedback below.
+
 ## User Feedback
-If you wish to report a problem or suggestion, please use [this repository issues](https://github.com/MillenniumDB/wikidata-endpoint/issues).
+
+We are happy to receive feedback about the service and about MillenniumDB. If you wish to report a problem or suggestion, please use [this issue tracker](https://github.com/MillenniumDB/wikidata-endpoint/issues).
