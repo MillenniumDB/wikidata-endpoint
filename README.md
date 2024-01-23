@@ -56,4 +56,4 @@ If you wish to comment about such a limitation, please leave us feedback below.
 
 ## User Feedback
 
-We are happy to receive feedback about the service and about MillenniumDB. If you wish to report a problem or suggestion, please use [this issue tracker](https://github.com/MillenniumDB/wikidata-endpoint/issues).
+We are happy to receive feedback about the service and about MillenniumDB. If you wish to report a problem or suggestion, please use [this issue tracker](https://github.com/MillenniumDB/wikidata-endpoint/issues). For more general feedback, write to us at [wikidata@imfd.cl](mailto:wikidata@imfd.cl).
