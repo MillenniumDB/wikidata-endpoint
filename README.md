@@ -34,7 +34,7 @@ frequent simple queries.
 
 ## Multithreading
 
-MillenniumDB can be configured with a set number of workers. Each worker uses one thread (max one core), and each query is handled by one worker (individual queries are thus single-threaded). The Wikidata service is configured with 20 workers, allowing up to 20 queries to be evalauted in parallel. MillenniumDB waits for a worker to come available before evaluating a query.
+MillenniumDB can be configured with a set number of workers. Each worker uses one thread (max one core), and each query is handled by one worker (individual queries are thus single-threaded). The Wikidata service is configured with 20 workers, allowing up to 20 queries to be evaluated in parallel. MillenniumDB waits for a worker to come available before evaluating a query.
 
 ## Limitations
 
